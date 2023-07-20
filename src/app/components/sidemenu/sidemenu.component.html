@@ -1,0 +1,29 @@
+<div class="text-center fixed top-0 left-0 z-10 border-r shadow-sm h-screen bg-white w-18 px-5 py-3 font-semibold">
+    <div class="mb-8">Notes</div>
+    <div class="mb-5 p-2 flex justify-center cursor-pointer" (click)="isAdding = !isAdding">
+        <div *ngIf="!isAdding" class="bg-black p-2.5 rounded-full">
+            <svg fill="white" width="18" height="18" version="1.1" id="lni_lni-plus" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64"
+                style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                <path d="M60,29.8H34.3V4c0-1.2-1-2.3-2.3-2.3c-1.2,0-2.3,1-2.3,2.3v25.8H4c-1.2,0-2.3,1-2.3,2.3c0,1.2,1,2.3,2.3,2.3h25.8V60
+	c0,1.2,1,2.3,2.3,2.3c1.2,0,2.3-1,2.3-2.3V34.3H60c1.2,0,2.3-1,2.3-2.3C62.3,30.8,61.2,29.8,60,29.8z" />
+            </svg>
+        </div>
+        <div *ngIf="isAdding" class="bg-black p-2.5 rounded-full">
+            <svg fill="white" width="18" height="18" version="1.1" id="lni_lni-close" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64"
+                style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                <path d="M35.2,32L59.6,7.6c0.9-0.9,0.9-2.3,0-3.2c-0.9-0.9-2.3-0.9-3.2,0L32,28.8L7.6,4.4c-0.9-0.9-2.3-0.9-3.2,0
+	c-0.9,0.9-0.9,2.3,0,3.2L28.8,32L4.4,56.4c-0.9,0.9-0.9,2.3,0,3.2c0.4,0.4,1,0.7,1.6,0.7c0.6,0,1.2-0.2,1.6-0.7L32,35.2l24.4,24.4
+	c0.4,0.4,1,0.7,1.6,0.7c0.6,0,1.2-0.2,1.6-0.7c0.9-0.9,0.9-2.3,0-3.2L35.2,32z" />
+            </svg>
+        </div>
+    </div>
+    <div *ngIf="isAdding" class="flex flex-col gap-4 items-center">
+        <span class="bg-[#fec871] p-1 rounded-full w-5 h-5 cursor-pointer" (click)="addNote('#fec871')"></span>
+        <span class="bg-[#ff9b73] p-1 rounded-full w-5 h-5 cursor-pointer" (click)="addNote('#ff9b73')"></span>
+        <span class="bg-[#b692fe] p-1 rounded-full w-5 h-5 cursor-pointer" (click)="addNote('#b692fe')"></span>
+        <span class="bg-[#01d4ff] p-1 rounded-full w-5 h-5 cursor-pointer" (click)="addNote('#01d4ff')"></span>
+        <span class="bg-[#e4ee90] p-1 rounded-full w-5 h-5 cursor-pointer" (click)="addNote('#e4ee90')"></span>
+    </div>
+</div>
