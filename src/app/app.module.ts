@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NoteCardModule } from './components/note-card/note-card.module';
 import { LoginModule } from './pages/login/login.module';
 import { RegisterModule } from './pages/register/register.module';
+import { NotfoundModule } from './pages/notfound/notfound.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RegisterModule } from './pages/register/register.module';
     HttpClientModule,
     NoteCardModule,
     LoginModule,
-    RegisterModule
+    RegisterModule,
+    NotfoundModule
   ],
   providers: [],
   bootstrap: [AppComponent]
