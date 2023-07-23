@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { NotesService } from 'src/app/services/notes.service';
 
 @Component({
@@ -10,11 +12,16 @@ export class SidemenuComponent {
 
   isAdding: boolean = false;
 
-  constructor(private noteService: NotesService) { }
+  constructor(private route: Router, private noteService: NotesService, private authService: AuthService) { }
 
   addNote(color: string) {
     this.noteService.addNoteModalColor = color;
     this.noteService.showAddNoteModal = true;
     this.isAdding = false;
+  }
+
+  logout() {
+    this.authService.logout();
+    this.route.navigateByUrl('login');
   }
 }

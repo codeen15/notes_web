@@ -1,8 +1,8 @@
-<div class="rounded-lg p-5 h-64 flex flex-col relative" [ngClass]="'bg-[' + note!.color + ']'">
+<div class="rounded-lg p-5 h-64 flex flex-col relative" [ngClass]="getColor(note!.color)">
     <div class="flex-1 text-lg">
         {{ note!.title }}
     </div>
-    <div class="text-sm text-gray-600">{{ note!.created_at.toDateString() }}</div>
+    <div class="text-sm text-gray-600">{{ note!.created_at }}</div>
     <div class="absolute bottom-5 right-5 flex items-center gap-2">
         <div class="bg-black p-2 rounded-full cursor-pointer" (click)="view()">
             <svg fill="white" width="15" height="15" version="1.1" id="lni_lni-eye" xmlns="http://www.w3.org/2000/svg"

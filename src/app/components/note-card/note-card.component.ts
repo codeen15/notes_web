@@ -26,4 +26,8 @@ export class NoteCardComponent {
   delete() {
     this.noteService.deleteNote(this.note!.id);
   }
+
+  getColor(color: string): string {
+    return `bg-[${color}]`;
+  }
 }

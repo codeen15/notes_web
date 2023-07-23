@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div class="flex w-screen min-h-screen justify-end">
+    <div
+        class="flex flex-col justify-center items-center border-l shadow-sm min-h-screen w-96 sm:w-[60vw] md:w-[50vw] lg:w-[40vw] px-10">
+
+        <div class="font-semibold text-2xl text-center mb-6">LOGIN</div>
+        <div class="flex flex-col w-full mb-4">
+            <label for="email" class="mb-2 text-sm text-gray-600">Email</label>
+            <input type="email" [(ngModel)]="email" class="py-2 px-4 rounded-lg border">
+        </div>
+        <div class="flex flex-col w-full mb-6">
+            <label for="password" class="mb-2 text-sm text-gray-600">Password</label>
+            <input type="password" [(ngModel)]="password" class="py-2 px-4 rounded-lg border">
+        </div>
+        <button (click)="login()"
+            class="px-4 py-2 mb-2 h-12 bg-purple-500 text-white text-sm w-full rounded-lg">LOGIN</button>
+        <button (click)="navigateToRegister()"
+            class="px-4 py-2 h-12 border border-purple-500 text-purple-500 text-sm w-full rounded-lg">REGISTER</button>
+    </div>
+</div>

@@ -7,6 +7,8 @@ import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NoteCardModule } from './components/note-card/note-card.module';
+import { LoginModule } from './pages/login/login.module';
+import { RegisterModule } from './pages/register/register.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NoteCardModule } from './components/note-card/note-card.module';
     AppRoutingModule,
     DashboardModule,
     HttpClientModule,
-    NoteCardModule
+    NoteCardModule,
+    LoginModule,
+    RegisterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
